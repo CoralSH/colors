@@ -2,7 +2,7 @@
 
 ## Usage
 ```sh
-course $(coral bootstrap)
+source $(coral bootstrap)
 
 require colors
 
