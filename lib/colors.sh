@@ -1,3 +1,12 @@
+black=30
+red=31
+greeen=32
+yellow=33
+blue=34
+purple=35
+cyan=36
+white=37
+
 none() { printf "\e[${2:-0}m$1\e[0m"; }
 
 black() { printf "\e[${2:-0};${3:-30}m$1\e[0m"; }
@@ -12,3 +21,5 @@ white() { printf "\e[${2:-0};${3:-37}m$1\e[0m"; }
 bold() { [ "$#" = "1" ] && none "$1" 1 || "$1" "$2" 1; }
 
 underline() { [ "$#" = "1" ] && none "$1" 4 || "$1" "$2" 4; }
+
+background() { printf "\e[$($1 "$2" "0" $(($(eval "echo \$$1") + 10)))"; }
