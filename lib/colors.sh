@@ -1,6 +1,6 @@
 black=30
 red=31
-greeen=32
+green=32
 yellow=33
 blue=34
 purple=35
@@ -11,7 +11,7 @@ none() { printf "\e[${2:-0}m$1\e[0m"; }
 
 black() { printf "\e[${2:-0};${3:-30}m$1\e[0m"; }
 red() { printf "\e[${2:-0};${3:-31}m$1\e[0m"; }
-greeen() { printf "\e[${2:-0};${3:-32}m$1\e[0m"; }
+green() { printf "\e[${2:-0};${3:-32}m$1\e[0m"; }
 yellow() { printf "\e[${2:-0};${3:-33}m$1\e[0m"; }
 blue() { printf "\e[${2:-0};${3:-34}m$1\e[0m"; }
 purple() { printf "\e[${2:-0};${3:-35}m$1\e[0m"; }
